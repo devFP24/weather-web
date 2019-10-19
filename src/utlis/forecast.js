@@ -11,7 +11,7 @@ const forecast = (data, callback) => {
       callback('Unable to find location!', undefined)
     } else {
       const forecastData = body.currently
-      callback(undefined, `It is currently ${forecastData.temperature} degress out. There is a ${forecastData.precipProbability}% chance of rain`)
+      callback(undefined, `${forecastData.summary}, It is currently ${forecastData.temperature} degress out. There is a ${forecastData.precipProbability}% chance of rain. Humidity across your region is ${forecastData.humidity}`)
     }
   })
 }
